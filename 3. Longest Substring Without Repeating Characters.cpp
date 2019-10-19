@@ -6,7 +6,7 @@ public:
         int maxLen = 1;
         int i = 0;
         int j = 0;
-        set substr{s[i]};
+        unordered_set substr{s[i]};
         while (i < s.size() && j < s.size()) {
             if (substr.find(s[j+1]) == substr.end() && (j+1) < s.size()) {
                 j++;
