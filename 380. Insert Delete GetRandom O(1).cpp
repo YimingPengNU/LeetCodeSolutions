@@ -27,11 +27,11 @@ public:
         int index = distribution(generator);
         auto iter = hash.begin();
         advance(iter, index);
-        return iter->second;
+        return *iter;
     }
     
 private:
-    unordered_map<int, int> hash; // key = val, value = val  
+    unordered_set<int> hash; 
     default_random_engine generator;
 };
 
