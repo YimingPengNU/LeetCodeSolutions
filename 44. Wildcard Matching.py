@@ -2,13 +2,8 @@ class Solution:
     def isMatch(self, s: str, p: str) -> bool:
         M = len(p)
         N = len(s)  
-        
-        # empty pattern can only match empty string
-        if M == 0:
-            return N == 0 
-        
         dp = [[0] * (M+1) for _ in range(N+1)]
-        # empty pattern can match empty string
+        # empty pattern can only match empty string
         dp[0][0] = 1
             
         # for empty string
