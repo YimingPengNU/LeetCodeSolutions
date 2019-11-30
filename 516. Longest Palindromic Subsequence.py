@@ -1,7 +1,7 @@
 class Solution:
     def longestPalindromeSubseq(self, s: str) -> int:
-        if not s:
-            return 0
+        if len(s) < 2:
+            return len(s)
         
         dp = [[0] * len(s) for _ in range(len(s))]
         for k in range(len(s)):
@@ -18,9 +18,6 @@ class Solution:
                     dp[i][j] = max(dp[i][j-1], dp[i+1][j])
         
         return dp[0][len(s) -1]
-                
-            
-        
                 
             
         
