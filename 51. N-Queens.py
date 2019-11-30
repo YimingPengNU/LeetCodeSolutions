@@ -6,7 +6,7 @@ class Solution:
         if not Q: 
             Q, res = [0] * n, []
         if r == n:
-            res.append(['.' * c + 'Q' + '.' * (n - c - 1) for c in Q])
+            res.append(['.' * j + 'Q' + '.' * (n - j - 1) for j in Q])
             return
         for j in range(n):
             legal = True
